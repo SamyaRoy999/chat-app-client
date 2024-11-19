@@ -7,7 +7,7 @@ import { MdOutlineLogin } from "react-icons/md";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger } from "@/components/ui/select"  
+import { Select, SelectContent, SelectTrigger } from "@/components/ui/select"  
 const Navbar = () => {
   return (
     <div className='flex items-center justify-between'>
@@ -33,11 +33,9 @@ const Navbar = () => {
                 <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectItem value="apple"  className='flex'><MdOutlineLogin /> Login</SelectItem>
-              <SelectItem value="banana" className='flex'><FaArrowTrendUp/>Register</SelectItem>
-            </SelectGroup>
+          <SelectContent>      
+              <Link  href={'/auth/Login'} ><MdOutlineLogin />Login</Link>
+              <Link  href={'/auth/Register'}  ><FaArrowTrendUp/>Register</Link>
           </SelectContent>
         </Select>
         
